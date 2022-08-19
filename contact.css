@@ -19,8 +19,10 @@
     top: 0;
     left: 0;
     z-index: 100000000000;
+    /* độ sâu */
     display: block;
     overflow: hidden;
+    /* ẩn */
 }
 
 .load img {
@@ -31,13 +33,17 @@
     left: 50%;
     margin-top: -75px;
     margin-left: -75px;
+    /* cho canh giữa  */
 }
 
 /*header */
 .header {
     background-color: black;
     justify-content: space-around;
-    /* Giá trị này cũng làm cho các khoảng cách giữa các phần tử bằng nhau, tuy nhiên nó cũng thay đổi cả vị trí của hai phần tử đầu cuối*/
+    /* Giá trị này cũng làm cho các khoảng 
+    cách giữa các phần tử bằng nhau, 
+    tuy nhiên nó cũng thay đổi cả vị trí 
+    của hai phần tử đầu cuối*/
     align-items: center;
 }
 
@@ -58,86 +64,72 @@ iframe {
     height: 500px;
 }
 
+/*text*/
+.text {
+    background-image: linear-gradient(225deg,
+            white 0%,
+            gray 10%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%);
+            /* kích thước màu và chọn ảnh  */
+    background-size: 200% auto;
+    /* kích thước ảnh nền */
+    background-clip: text;
+    /*  */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 1.8s linear infinite;
+    display: inline-block;
+    font-size: 35px;
+}
+
 /*LIÊN HỆ*/
 .lienhe {
     width: 65%;
 }
 
-.thongtin-items {
-    width: 100%;
-    margin: auto;
-}
-
-ul.list>li>a:hover {
-    text-shadow: 0 0 5px #ffee10;
-}
-
 .lienhe-head {
     padding-top: 60px;
     font-weight: 700;
-    font-size: 44px;
 }
 
 .lienhe-describe {
-    padding: 20px 0 20px 0;
+    padding: 20px 0;
 }
-
-.describe {
-    width: 80%;
-    padding: 20px 0 20px 0;
-}
-
 
 .lienhe-form {
     width: 65%;
 }
 
-#btn-register  button {
-    padding: 30px;
-    width: 80%;
-    display: block;
-    margin: 20px auto;
-} 
-
-.custom-btn {
-    color: #fff;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-        7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-}
-
-#btn-register  {
-    border: none;
-    padding: 20px;
-    display: block;
-    margin: 20px auto;
-   
-}
 form .form-control {
 	position: relative;
 	border-bottom: 2px solid #adadad;
+    /* phần gạch dưới màu xám  */
 	margin: 40px 0;
 }
 
 .form-control.success {
 	border-bottom-color: #2691d9;
+    /* nếu nó dúng form thì ra màu xanh */
 }
 
 .form-control.error {
 	border-bottom-color: #e74c3c;
+    /* nếu nó sai form thì ra màu đỏ */
 }
 
-.form-control input {
+.form-control input { /* phần nhập  */
 	width: 100%;
 	height: 40px;
 	font-size: 16px;
 	border: none;
 	background: none;
 	outline: none;
+    /* không có đường kẻ */
 }
 
-small {
+small { /* lúc thông báo thiếu hoặc nhập sai thông tin */
 	position: absolute;
 	left: 0;
 	top: 100%;
@@ -145,7 +137,7 @@ small {
 	color: #e74c3c;
 }
 
-.form-control span::before {
+.form-control span::before { /* trước khi nhập thông tin*/
 	content: '';
 	position: absolute;
 	top: 40px;
@@ -160,13 +152,14 @@ small {
 	width: 100%;
 }
 
-input[type='submit'] {
+input[type='submit'] { /* khi bấm vào ô send  */
 	margin-top: 20px;
 	width: 100%;
 	height: 50px;
 	border: 1px solid;
 	background: #2691d9;
 	border-radius: 25px;
+    /* bo tròn  */
 	font-size: 18px;
 	color: #e9f4fb;
 	font-weight: 700;
@@ -175,72 +168,35 @@ input[type='submit'] {
 	transition: 0.5s;
 }
 
-input[type='submit']:hover {
+input[type='submit']:hover { /* khi hover cái nút send */
 	background-color: #08609a;
 }
 
-.signup_link {
-	margin: 25px 0;
-	text-align: center;
-	font-size: 16px;
-	color: #666666;
-}
-
-.signup_link a {
-	color: #2691d9;
-	text-decoration: none;
-}
-
-.signup_link a:hover {
-	text-decoration: underline;
-}
-    
-
-label {
-    padding-left: 50px;
-    font-size: 17px;
-    color: gray;
-}
-
-.btn-2 {
-    background-color: red;
-}
-.btn-2:hover {
-    background-color: blue;
-}
-
 /*thông tin*/
+.thongtin {
+    width: 35%;
+}
+
 .thongtin-head {
     padding-top: 60px;
     font-weight: 700;
 }
 
 .thongtin-describe {
-    padding: 20px 0 20px 0;
-}
-.thongtin {
-    width: 35%;
+    padding: 20px 0 ;
 }
 
+.thongtin-items {
+    width: 100%;
+    margin: auto;
+}
 .thongtin-items hr {
     width: 15%;
 }
 
-/*text*/
-.text {
-    background-image: linear-gradient(225deg,
-            white 0%,
-            gray 10%,
-            #44107a 29%,
-            #ff1361 67%,
-            #fff800 100%);
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 1.8s linear infinite;
-    display: inline-block;
-    font-size: 35px;
+ul.list>li>a:hover { /* khi hover các thẻ a thì ra màu vàng */
+    text-shadow: 0 0 5px #ffee10;
+    /* tạo bóng cho các thành phần  */
 }
 
 @keyframes textclip {
@@ -253,14 +209,6 @@ label {
 
 .col30 {
     width: 50%;
-}
-
-div.col302 {
-    width: 50%;
-}
-
-.col30 {
-    width: 50%;
     padding: 30px;
     margin-top: 80px;
 }
@@ -269,16 +217,19 @@ div.col302 {
     font-size: 22px;
     font-weight: 600;
     letter-spacing: 0.5px;
+    /* tăng giảm khoáng cách kí tự  */
 }
 
 .col30>ul {
     list-style-type: none;
     line-height: 2.5;
+    /* chiều cao các dòng */
 }
 
 .col30>ul>li>a {
     display: block;
     text-decoration: none;
+    /* bỏ gạch chân */
 }
 
 .col30 i {
@@ -295,11 +246,12 @@ div.col302>h2 {
     font-size: 22px;
     font-weight: 600;
     letter-spacing: 0.5px;
+    /* tăng giảm khoáng cách kí tự  */
 }
 
 ul.col302 {
     list-style-type: none;
-    /*  line-height: 2.5; */
+    /* bỏ dấu chấm  */
     font-size: 20px;
 }
 
@@ -392,9 +344,12 @@ ul.item2>li>a>i {
 
 .contact-fixed2 {
     overflow: hidden;
+    /* ẩn các văn bản dư */
     box-shadow: 0 0.46875rem 2.1875rem rgb(90 97 105 / 10%), 0 0.9375rem 1.40625rem rgb(90 97 105 / 10%), 0 0.25rem 0.53125rem rgb(90 97 105 / 12%), 0 0.125rem 0.1875rem rgb(90 97 105 / 10%);
     transition: .3s ease;
+    /* sẽ chạy chậm khi bắt đầu và tăng dần và khi kết thúc sẽ chậm dần trong 0.3 s */
     border-radius: 1rem 0 0 1rem;
+    /* bo tròn  */
     background-color: #fff;
 }
 
@@ -409,22 +364,24 @@ ul.item2>li>a>i {
     border-bottom: 1px solid #dee2e6;
 }
 
-.contact-fixed2 a {
+.contact-fixed2 a { /* bỏ gạch chân */
     text-decoration: none;
 }
 
-.item-footer i {
+.item-footer i { /* tăng kích thước icon */
     font-size: 30px;
 }
 
 .text-footer2 {
-    display: none;
+    display: none;/* cho về định dạng văn bản  */
     position: absolute;
+    /* đi theo thằng cha tức là đang flex  */
     right: 65px;
     padding: 10px;
     min-width: 120px;
     border-radius: 3px;
     background-color: hsla(0, 0%, 20%, 0.9);
+    /* theo thứ tự là màu sắc, độ bão hòa, độ sáng, độ mờ đục */
     color: #fff;
     text-align: center;
     font-size: 14px;
@@ -448,6 +405,7 @@ a#gototop {
     text-align: center;
     border-radius: 3px;
     float: right;
+    /* cho nó nằm bên phải  */
     margin-top: 70px;
 }
 
